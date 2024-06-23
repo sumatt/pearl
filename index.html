@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pearl</title>
+    <title>Fullscreen GIF</title>
     <style>
         body, html {
             margin: 0;
@@ -30,11 +30,38 @@
             min-height: 100%;
             object-fit: cover;
         }
+        .social-icons {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #ddd;
+        }
+        @media (max-width: 600px) {
+            .gif-container img {
+                min-width: 150%;
+                min-height: 150%;
+            }
+        }
     </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="gif-container">
         <img src="PearlFontsShuffle.gif" alt="Fullscreen GIF">
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
     </div>
 </body>
 </html>
