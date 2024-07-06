@@ -16,6 +16,25 @@
             align-items: center;
             background-color: #f8fde9; /* Ensure correct hex format for background color */
         }
+        .navbar {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100%;
+            background-color: #f8fde9;
+            text-align: left;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: #c5c9b5;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .navbar a:hover {
+            color: #7475b0;
+        }
         .gif-container {
             position: relative;
             width: auto;
@@ -56,11 +75,13 @@
                 height: auto; /* Maintain aspect ratio */
             }
         }
-        
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div class="navbar">
+        <a href="https://pearlit.xyz/about">about</a>
+    </div>
     <div class="gif-container">
         <img src="PearlFontsShuffle.gif" alt="Fullscreen GIF">
     </div>
