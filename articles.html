@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearl Writing</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8fde9; /* Ensure correct hex format for background color */
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        .navbar {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100%;
+            background-color: #f8fde9;
+            text-align: left;
+            padding: 10px 0;
+        }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f8fde9;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #c5c9b5;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-size: 16px;
+        }
+        .dropdown-content a:hover {
+            background-color: #f0f0f0;
+            color: #7475b0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .navbar a {
+            color: #c5c9b5;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .navbar a:hover {
+            color: #7475b0;
+        }
+        .content {
+            max-width: 800px;
+            padding: 20px;
+            color: #7475b0; /* Purple color */
+            font-size: 50pt;
+        }
+        .content b {
+            font-weight: bold;
+        }
+        .typing-container {
+            white-space: pre-wrap; /* Preserve spaces and line breaks */
+        }
+        @media (max-width: 600px) {
+            .navbar {
+                top: 5px;
+                left: 5px;
+                padding: 5px 0;
+            }
+            .navbar a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+            .content {
+                font-size: 24pt; /* Adjust font size for mobile */
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="https://pearlit.xyz/">home</a>
+        <a href="https://pearlit.xyz/about">about</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="typing-container" id="typing-container"></div>
+    </div>
+    <script>
+        const text = "coming soon ...";
+        const typingContainer = document.getElementById('typing-container');
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typingContainer.innerHTML = text.slice(0, index + 1);
+                index++;
+                setTimeout(type, 100); // Adjust typing speed here
+            }
+        }
+
+        window.onload = type;
+    </script>
+</body>
+</html>
