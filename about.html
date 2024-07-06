@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Pearl</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8fde9; /* Ensure correct hex format for background color */
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        .navbar {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100%;
+            background-color: #f8fde9;
+            text-align: left;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: #c5c9b5;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .navbar a:hover {
+            color: #7475b0;
+        }
+        .content {
+            max-width: 800px;
+            padding: 20px;
+            color: #7475b0; /* Purple color */
+            font-size: 50pt;
+        }
+        .content b {
+            font-weight: bold;
+        }
+        .typing-container {
+            white-space: pre-wrap; /* Preserve spaces and line breaks */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">go back</a>
+    </div>
+    <div class="content">
+        <div class="typing-container" id="typing-container"></div>
+    </div>
+    <script>
+        const text = "a creative agency devoted to the <b>education</b> and <b>destigmatization</b> of the <b>cannabis</b> plant.";
+        const typingContainer = document.getElementById('typing-container');
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typingContainer.innerHTML = text.slice(0, index + 1);
+                index++;
+                setTimeout(type, 100); // Adjust typing speed here
+            }
+        }
+
+        window.onload = type;
+    </script>
+</body>
+</html>
